@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Home" defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center">
+
+  <div class="success-message">
+    <ion-icon name="checkmark-circle-outline" class="success-icon"></ion-icon>
+    <h2>¡Te has registrado exitosamente!</h2>
+    <p>Ahora puedes iniciar sesión con tus datos.</p>
+  </div>
+
+  <!-- Botón para iniciar sesión -->
+  <ion-button expand="full" routerLink="/login" color="success">Iniciar Sesión</ion-button>
+
+</ion-content>
+
+<style>
+  .success-message {
+    margin-top: 50px;
+  }
+
+  .success-icon {
+    font-size: 3em;
+    color: #4CAF50; /* Verde para éxito */
+  }
+</style>
