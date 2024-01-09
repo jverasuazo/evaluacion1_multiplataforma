@@ -15,7 +15,7 @@ export class PeticionesService {
   constructor(
     public _http:HttpClient
   ) { 
-    this.url= "https://"
+    this.url= "https://67f881xbve.execute-api.us-east-2.amazonaws.com/produccion/"
   }
 
   getDespacho(): Observable<any>{
@@ -28,8 +28,8 @@ export class PeticionesService {
   addProducto(producto: Producto): Observable<Producto> {
     return this._http.post<Producto>(this.url + 'api-productos/productos/addproducto', producto);
   }
-  /*addEnvio(envio: Envio): Observable<Envio>{
+  addEnvio(envio: Envio): Observable<Envio>{
     return this._http.post<Envio>(this.url+'api-productos/productos/addenvio', envio);
-  }*/
+  }
 
 }
