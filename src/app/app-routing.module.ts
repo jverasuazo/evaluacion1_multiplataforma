@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ProductoComponent } from './producto/producto.component';
+import { EnvioComponent } from './envio/envio.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -8,7 +10,8 @@ const routes: Routes = [
   {path: 'menu', loadChildren: './menu/menu.module#MenuPageModule'},
   {path: 'usuario', loadChildren: './usuario/usuario.module#UsuarioPageModule' },
   {path: 'registrado', loadChildren: './registrado/registrado.module#RegistradoPageModule' },
-
+  {path: 'producto', component: ProductoComponent},
+  {path: 'envio', component: EnvioComponent},
 
 {
   path: '',
